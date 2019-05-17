@@ -75,6 +75,12 @@ When instead of a single value you need to insert a whole JSON structure, you ne
 
     {{ marshal .db }}
 
+### Add comments to the configuration
+To add comments to the configuration, the [Go template comment format](https://golang.org/pkg/text/template/#hdr-Actions) can be used. Examples:
+
+    {{/* This is a comment */}}
+    {{- /* This is an other comment */ -}}
+
 ## Testing the configuration
 As the configuration is now composed of several pieces, it's easy to do a mistake in some point. Test the syntax of all the files is good with the `krakend check` command and pay attention to the output to verify there aren't any errors.
 
